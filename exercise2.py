@@ -4,7 +4,6 @@
 ## Note2: To run multiple lines of codes, select multiple lines,  right-click and choose "Execute Selection in Python Console"
 
 
-
 # 1. Python Basics: Numbers, Strings, List
 ## 1.1 Numbers and operators
 1 + 2            # Addition, try subtraction (-)?
@@ -15,11 +14,8 @@ a = 20           # Assignment operators, assign a value (20) to a newly created 
 b = 5
 a * b            # Use the two variables
 
-a == 20          # Comparison operators ==, >, <, !=, <=, >=
-b != 50
-
-not a < 10               # Logical operator: not, and, or
-(a > 10) and (b == 10)   # Two conditions, same as width > 10 and height == 10
+a == 20                  # Comparison operators: ==, >, <, !=, <=, >=
+(a > 10) and (b == 10)   # Logical operators: not, and, or
 
 ## 1.2 Strings
 "Hello Everyone"  # Either double quote or single quote are fine
@@ -30,20 +26,17 @@ print(sentence)                           # print() will display the contents wi
 
 # Strings can be indexed, sliced, concatenated.
 len(sentence)  # Check the length of a string
-sentence[5]    # Select character in the sixth position: python index starts from 0
-sentence[-1]   # The last character (use - to index from the end)
+sentence[5]    # Select character in the 6th position: python index starts from 0
 sentence[:5]   # Select five three character: index 0,1,2,3,4 only, same as sentence[0:5]
 sentence[5:]   # Select all characters starting from the 6th (index 5)
 
 #sentence[0] = 'H'                       # Strings cannot be muted, ERROR here if executed
 '1st' + sentence[5:]                     # Replace first 5 characters via concatenating two strings.
-'The 2nd ' + sentence[-5:-1] + ' only.'  # More complicated concatenation
 
 ## 1.3 Lists
 lst1 = [1, 2, 3, 4, 5]      # Create a list variable lst1
 1 in lst1                   # Membership operators: in, not in
-lst1[0]                     # Lists can be indexed as well
-lst1[3:]                    # Select all elements starting from the 4th
+lst1[2]                     # Lists can be indexed as well, same as strings
 lst1[0] = 'one'             # Unlike strings, lists are mutable.
 
 
@@ -73,7 +66,6 @@ for i in lst2:
 # 3. Python functions and Modular Programming
 ## 3.1 Built-in functions
 round(13.136784, 2)    # round a number to certain decimal places
-pow(4, 3)              # same as 4**3
 
 ## 3.2 Define a custom function
 ## Define two functions
