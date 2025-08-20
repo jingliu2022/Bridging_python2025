@@ -22,7 +22,7 @@ a == 20                  # Comparison operators: ==, >, <, !=, <=, >=
 "doesn't"         # Double quote outside, single quote inside (or reverse)
 
 sentence = 'First line.\nSecond line.'    # Create a sentence with multiple lines - break lines with \n
-print(sentence)                           # print() will display the contents without quotation mark
+print(sentence)                           # print() will display the texts without quotation mark and special characters
 
 # Strings can be indexed, sliced, concatenated.
 len(sentence)  # Check the length of a string
@@ -31,13 +31,13 @@ sentence[:5]   # Select five three character: index 0,1,2,3,4 only, same as sent
 sentence[5:]   # Select all characters starting from the 6th (index 5)
 
 #sentence[0] = 'H'                       # Strings cannot be muted, ERROR here if executed
-'1st' + sentence[5:]                     # Replace first 5 characters via concatenating two strings.
+'1st' + sentence[5:]                     # Replace first 5 characters via concatenating two strings
 
 ## 1.3 Lists
 lst1 = [1, 2, 3, 4, 5]      # Create a list variable lst1
 1 in lst1                   # Membership operators: in, not in
 lst1[2]                     # Lists can be indexed as well, same as strings
-lst1[0] = 'one'             # Unlike strings, lists are mutable.
+lst1[0] = 'one'             # Unlike strings, lists are mutable
 
 
 # 2. Flow Control
@@ -47,15 +47,9 @@ lst2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]    # Create another list variable lst2
 for i in lst2:
     print(i * 10 + 1)     # Indented (press the tab key)
 
-## 2.2 The if-else statement
-if 2 in lst2:
-    print("We find it!")
-else:
-    print("Unfortunately, we cannot find it!")
-
-## 2.3 Combine for-loop and if-else statement
+## 2.2 Combine for-loop with if-else statement (Execute Selection)
 for i in lst2:
-    if i <= 4:  # 1st indentation
+    if i <= 4:                         # 1st indentation
         print(i, "is in the bottom.")  # 2nd indentation
     elif (i > 4) and (i <= 7):
         print(i, 'is in the middle.')
@@ -67,8 +61,7 @@ for i in lst2:
 ## 3.1 Built-in functions
 round(13.136784, 2)    # round a number to certain decimal places
 
-## 3.2 Define a custom function
-## Define two functions
+## 3.2 Define a custom function (Execute Selection)
 def greet(name):
     print("Hello, " + name + ". How are you today?")
 
@@ -80,20 +73,20 @@ def compare(a, b):
     else:
         print(str(a) + " is equal to " + str(b) + ".")
 
-## Apply the two functions by feeding param values
-greet('Alice')
-compare(2.0, 2)
+## 3.3 Apply the two functions by specifying parameter values
+greet(name = 'Alice')         # Same as gree('Alice')
+compare(a = 2.0, b = 2)       # Same as compare(2.0,2)
 
 
 ##  3.3 Modular Programming
-## Step 1: save the above codes in 3.2 in a new python file and name the file as my_module.py
-## Step 2: import the module, run those functions by assigning new param values
+## Step 1: save the above codes in 3.2 in a new python script and name the file as my_module.py
+## Step 2: import the file, run those functions by assigning new param values
 import my_module
 help(my_module)              # Check the information of the module first
 
 my_module.greet('Richard')   # Use functions after the module name with the .method
 my_module.compare(1, 2)
 
-from my_module import greet  # We can also import a function from a module directly
+from my_module import greet  # Alternatively, import a function from a module directly
 greet('Alice')
 
